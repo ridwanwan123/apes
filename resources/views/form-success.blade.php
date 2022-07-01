@@ -36,7 +36,7 @@
 </head>
 <body>
     <!-- NAVBAR SECTION  -->
-    <section>
+    {{-- <section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
             <div class="container-fluid justify-content-center">
                 <a class="navbar-brand" href="{{ route('homepage') }}">
@@ -44,12 +44,12 @@
                 </a>
             </div>
         </nav>
-    </section>
+    </section> --}}
     <!-- END NAVBAR  -->
 
     <!-- MULAI CONTENT  -->
 
-    <section id="header" class="header">
+    {{-- <section id="header" class="header">
         <div class="container-fluid">
             <h2 class="text-4xl fw-bold color-palette-1 mt-30">
                 PELAPORAN PELECEHAN SEKSUAL 
@@ -59,7 +59,7 @@
                 Anda akan diminta untuk mengisi identitas sebagai pelapor, untuk kepentingan tindak lanjut kasus.
             </p>
         </div>
-    </section>
+    </section> --}}
 
     <!-- FORMULIR  -->
     <section id="formulir" class="formulir">
