@@ -83,17 +83,24 @@
                                 ‘saya korban’ untuk melewati langkah formulir korban  </p>
                         </div>
 
+                        @csrf
+                        <!-- input -->
+                        <div class="row g-3 col-lg-12">
+                            <div class="col mb-3">
+                                <label for="no_ktp" class="form-label">NOMOR KTP / NOMOR IDENTITAS</label>
+                                <input type="number" class="form-control" id="no_ktp" value="{{ old('no_ktp') }}" name="no_ktp" aria-describedby="no_ktp">
+                            </div>
+                        </div>
+
                         <!-- Input  -->
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3 ">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="email" class="form-label">Alamat Email</label>
+                                <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" aria-describedby="email">
                             </div>
                             <div class="col mb-3 ">
-                                <label for="nama_korban" class="form-label">Nama Korban</label>
-                                <input type="nama_korban" class="form-control" id="nama_korban" name="nama_korban" aria-describedby="nama_korban">
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="nama_pelapor" class="form-label">Nama Pelapor</label>
+                                <input type="nama_pelapor" class="form-control" id="nama_pelapor" value="{{ old('nama_pelapor') }}" name="nama_pelapor" aria-describedby="nama_pelapor">
                             </div>
                         </div>
 
@@ -101,59 +108,58 @@
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3 ">
                                 <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir">
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
                             </div>
                             <div class="col mb-3 ">
-                                <label for="no_telepon" class="form-label">No Telepon</label>
-                                <input type="number" class="form-control" name="no_telepon" id="no_telepon" aria-describedby="emailHelp">
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <input type="text" class="form-control" name="alamat" value="{{ old('alamat') }}" id="alamat" aria-describedby="alamat">
                             </div>
                         </div>
 
-                        <!-- Input -->
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3">
                                 <label for="" class="form-label">Jenis Kelamin</label>
                                 <div class="form-check m-2">
                                     <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Laki-laki">
                                     <label class="form-check-label" for="jenis_kelamin1">
-                                      Laki-laki
+                                    Laki-laki
                                     </label>
-                                  </div>
-                                  <div class="form-check m-2">
+                                </div>
+                                <div class="form-check m-2">
                                     <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan">
                                     <label class="form-check-label" for="jenis_kelamin2">
-                                      Perempuan
+                                    Perempuan
                                     </label>
                                 </div>
                             </div>
+                            <div class="col mb-3">
+                                <label for="no_telepon" class="form-label">Nomor Telepon</label>
+                                <input type="number" class="form-control" id="" name="no_telepon" value="{{ old('no_telepon') }}" aria-describedby="no_telepon">
+                            </div>
                         </div>
+                        
 
                         <!-- input -->
                         <div class="row g-3 col-lg-12">
                             <div class="col-4 mb-3">
-                                <label for="tempat_kejadian" class="form-label">Tempat Kejadian</label>
-                                <input type="text" class="form-control" id="" name="tempat_kejadian" aria-describedby="tempat_kejadian">
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="lokasi_kejadian" class="form-label">Lokasi Kejadian</label>
+                                <input type="text" class="form-control" id="" name="lokasi_kejadian" value="{{ old('lokasi_kejadian') }}" aria-describedby="lokasi_kejadian">
                             </div>
                         </div>
 
                         <!-- input -->
                         <div class="row g-3 col-lg-12">
                             <div class="col-4 mb-3">
-                                <label for="formFile" class="form-label">Alat Bukti (Foto)</label>
-                                <input class="form-control" type="file" name="bukti" id="formFile">
-                                <!-- ERROR <div id="formFile" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="bukti" class="form-label">Bukti (Foto)</label>
+                                <input class="form-control" type="file" name="bukti" id="bukti" value="{{ old('bukti') }}">
                             </div>
                         </div>
 
                         <!-- input -->
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3">
-                                <label for="deskripsi_pelaku" class="form-label">Deskripsi Pelaku</label>
-                                <textarea class="form-control" id="deskripsi_pelaku" name="deskripsi_pelaku" rows="6"></textarea>
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="dekripsi_pelaku" class="form-label">Deskripsi Pelaku</label>
+                                <textarea class="form-control" id="dekripsi_pelaku" name="dekripsi_pelaku" rows="6">{{ old('dekripsi_pelaku') }}</textarea>
                             </div>
                         </div>
 
@@ -162,19 +168,16 @@
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3">
                                 <label for="kronologi_kejadian" class="form-label">Kronologi Kejadian</label>
-                                <textarea class="form-control" id="kronologi_kejadian" name="kronologi_kejadian" rows="6"></textarea>
-                                <!-- ERROR <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <textarea class="form-control" id="kronologi_kejadian" name="kronologi_kejadian" rows="6">{{ old('kronologi_kejadian') }}</textarea>
                             </div>
                         </div>
+                    
 
                         <!-- BUTTON  -->
                         <div class="d-md-flex justify-content-md-end mt-5">
-                            <!-- <button class="btn btn-primary me-md-2" type="button">Button</button> -->
-                            <!-- <button class="btn btn-primary" type="button">Button</button> -->
-                            
-                            <a href="{{ route('form-pelaporan.success') }}" class="btn btn-primary btn-next p-3"> Submit Laporan</a>
-
-                            <!-- <input type="button" value="Submit Laporan" class="btn btn-primary btn-next p-3"> -->
+                            <button type="submit" class="mt-1 btn  btn-next d-grid p-3 m-3 text-white">
+                                <span class="font-semibold  text-base">Tambah Data</span>
+                            </button>
                         </div>
                         
 

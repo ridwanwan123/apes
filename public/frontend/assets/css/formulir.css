@@ -24,7 +24,7 @@ hr{
 
 .btn-next:hover{
     color: #BA68C8;
-    background-color: #fff;
+    background-color: rgb(169, 167, 167);
     box-shadow: 1px 2px 7px #BA68C8;
     border-radius: 25px;
 }
