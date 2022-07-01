@@ -21,7 +21,7 @@
                       class="d-md-block d-none"> para korban pelecehan seksual
               </p>
               <div class="d-flex flex-lg-row flex-colcontainer-fluidumn gap-4">
-                  <a class="btn btn-get text-lg text-white rounded-pill" href="formulir.html" role="button">LAPORKAN</a>
+                  <a class="btn btn-get text-lg text-white rounded-pill" href="{{ route('form-pelaporan') }}" role="button">LAPORKAN</a>
               </div>
           </div>
           <div class="col-lg-6 col-12 d-lg-block d-none">

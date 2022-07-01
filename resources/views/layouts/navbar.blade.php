@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
                     <li class="nav-item my-auto">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item my-auto">
                         <a class="nav-link" href="statistik.html">Statistik</a>
@@ -21,7 +21,7 @@
                     </li>
                     <li class="nav-item my-auto">
                         <a class="btn btn-lapor d-flex justify-content-center ms-lg-2"
-                            href="formulir.html" role="button">Lapor</a>
+                            href="{{ route('form-pelaporan') }}" role="button">Lapor</a>
                     </li>
                 </ul>
             </div>

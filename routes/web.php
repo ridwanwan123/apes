@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PelaporanSeksualController;
 
+use App\Http\Controllers\PelaporanSeksualController as PelaporanController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +41,8 @@ Route::get('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualCont
 Route::put('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualController::class, 'update'])->name('admin.pelaporan-seksual-update');
 
 Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksualController::class, 'destroy'] )->name('admin.pelaporan-seksual.destroy');
+
+
+//HALAMAN UTAMA
+Route::get('/form-pelaporan-pelecehan-seksual', [PelaporanController::class, 'index'])->name('form-pelaporan');
+Route::get('/form-pelaporan-pelecehan-seksual/success', [PelaporanController::class, 'success'])->name('form-pelaporan.success');
