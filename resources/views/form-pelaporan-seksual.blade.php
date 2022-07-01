@@ -87,7 +87,7 @@
                         <!-- input -->
                         <div class="row g-3 col-lg-12">
                             <div class="col mb-3">
-                                <label for="no_ktp" class="form-label">NOMOR KTP / NOMOR IDENTITAS</label>
+                                <label for="no_ktp" class="form-label">Nomor KTP / Nomor Identitas</label>
                                 <input type="number" class="form-control" id="no_ktp" value="{{ old('no_ktp') }}" name="no_ktp" aria-describedby="no_ktp">
                             </div>
                         </div>
@@ -175,8 +175,8 @@
 
                         <!-- BUTTON  -->
                         <div class="d-md-flex justify-content-md-end mt-5">
-                            <button type="submit" class="mt-1 btn  btn-next d-grid p-3 m-3 text-white">
-                                <span class="font-semibold  text-base">Tambah Data</span>
+                            <button type="submit" class="mt-1 btn  btn-next d-grid p-3 m-3">
+                                <span class="font-semibold text-base">Submit Laporan</span>
                             </button>
                         </div>
                         
