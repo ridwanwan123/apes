@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin\PelaporanSeksualController;
 
 Route::get('/', function () {
     return view('homepage');
-});
+})->name('homepage');
 
 //ADMIN 
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
