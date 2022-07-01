@@ -44,5 +44,10 @@ Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksua
 
 
 //HALAMAN UTAMA
+//FORMULIR
 Route::get('/form-pelaporan-pelecehan-seksual', [PelaporanController::class, 'index'])->name('form-pelaporan');
+Route::post('/form-pelaporan-pelecehan-seksual/store', [PelaporanController::class, 'store'])->name('form-pelaporan.store');
 Route::get('/form-pelaporan-pelecehan-seksual/success', [PelaporanController::class, 'success'])->name('form-pelaporan.success');
+
+
+

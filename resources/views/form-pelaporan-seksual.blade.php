@@ -63,10 +63,8 @@
     <!-- FORMULIR  -->
     <section id="formulir" class="formulir">
         <div class="container-fluid">
-            <form action="" id="msForm" class="row">
+            <form action="{{ route('form-pelaporan.store') }}" id="msForm" class="row" enctype="multipart/form-data" method="POST">
                 <div class="card formulir-card mt-5">
-                
-                
                      <!-- progressbar -->
                      <ul id="progressbar">
                         <li class="active text-center" id="tahap1"><strong>Tahap 1</strong></li>
@@ -78,9 +76,8 @@
                     <div class="row gap-lg-0 gap-5">
                         <div class="col-lg-12 col-12 my-auto">
                             <p class=" "></p>
-                            <h1 class="header-title color-palette-1 fw-bold">Identitas Pelapor</h1>
-                            <p class="mt-30 mb-40 text-lg color-palette-2">Pelaporan atau korban dapat berkonsultasi kepada para ahli untuk menyembuhkan depresi atau trauma yang mendalamIdentitas yang mengajukan laporan, jika pelapor adalah korban maka pilih 
-                                ‘saya korban’ untuk melewati langkah formulir korban  </p>
+                            <h1 class="header-title color-palette-1 fw-bold">Formulir Pelaporan</h1>
+                            <p class="mt-30 mb-40 text-lg color-palette-2">Di harap mengisi data dengan baik dan jujur</p>
                         </div>
 
                         @csrf
