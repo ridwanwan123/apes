@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('slug');
             $table->text('body');
             $table->text('sumber');
-            $table->timestamps('published_at')->nullable();
+            $table->date('publish')->nullable();
             $table->timestamps();
         });
     }
