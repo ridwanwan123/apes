@@ -10,19 +10,17 @@
         <div class="col-md-8">
     
           <article class="blog-post">
-            <h2 class="blog-post-title">Judul blog post</h2>
-            <p class="blog-post-meta">January 1, 2021, <strong class="d-inline-block mb-2 text-danger">Category</strong></p>
+            <h2 class="blog-post-title">{{ $News->judul }}</h2>
+            <p class="blog-post-meta">{{ $News->publish }}, <strong class="d-inline-block mb-2 text-danger">{{ $News->kategori }}</strong></p>
 
             <img src="{{ asset('frontend/assets/image/GenderViolence.png') }}" width="100%" height="450" alt="" srcset="">
             
-            <p class="p-3">This is some additional paragraph placeholder content. 
-                It has been written to fill the available space and show how a longer snippet of text affects 
-                the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the
-                 lookout for this exact same string of text.
+            <p class="p-3">
+              {{ $News->body }}
             </p>
             
             </article>
-            <h5 class="mt-5">Sumber : <strong class="d-inline-block mb-2 text-primary">Detik.com</strong></h5>
+            <h5 class="mt-5">Sumber : <strong class="d-inline-block mb-2 text-primary"> {{ $News->sumber }}</strong></h5>
     
         </div>
     

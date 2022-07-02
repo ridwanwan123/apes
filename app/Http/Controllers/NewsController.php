@@ -3,16 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        return view('news');
+        $News = News::all();
+
+        return view('news', ['News' => $News]);
     }
 
-    public function detail()
+    public function detail($id)
     {
-        return view('news-detail');
+        
+        $News = News::find($id);
+        
+        return view('news-detail', ['News' => $News]);
     }
 }

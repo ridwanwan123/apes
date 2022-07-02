@@ -32,5 +32,11 @@
           <div data-i18n="Analytics">Laporan Pelecehan Seksual</div>
         </a>
       </li>
+      <li class="menu-item">
+        <a href="{{ route('admin.berita-pelecehan') }}" class="menu-link">
+          <i class="menu-icon tf-icons bx bxs-report"></i>
+          <div data-i18n="Analytics">Berita Pelecehan Seksual</div>
+        </a>
+      </li>
     </ul>
   </aside>
