@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PelaporanSeksualController;
 
 use App\Http\Controllers\PelaporanSeksualController as PelaporanController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,11 @@ Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksua
 Route::get('/form-pelaporan-pelecehan-seksual', [PelaporanController::class, 'index'])->name('form-pelaporan');
 Route::post('/form-pelaporan-pelecehan-seksual/store', [PelaporanController::class, 'store'])->name('form-pelaporan.store');
 Route::get('/form-pelaporan-pelecehan-seksual/success', [PelaporanController::class, 'success'])->name('form-pelaporan.success');
+
+
+//BERITA
+Route::get('/berita-pelecehan-seksual', [NewsController::class, 'index'])->name('berita-pelecehan');
+Route::get('/berita-pelecehan-seksual/1', [NewsController::class, 'detail'])->name('berita-pelecehan.detail');
 
 
 

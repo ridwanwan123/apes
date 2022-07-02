@@ -15,6 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/utilites.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/news.css') }}"> --}}
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,7 +28,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-    <title>APES | @yield('title')</title>
+    <title>APES |  @yield('title')</title>
     <!-- Logo icon -->
     <link rel="shorcut icon" href="{{ asset('frontend/assets/image/A1.png') }}">
     

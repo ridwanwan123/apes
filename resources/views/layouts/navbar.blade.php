@@ -20,6 +20,9 @@
                         <a class="nav-link" href="konsultasi.html">Konsultasi</a>
                     </li>
                     <li class="nav-item my-auto">
+                        <a class="nav-link" href="{{ route('berita-pelecehan') }}">Berita</a>
+                    </li>
+                    <li class="nav-item my-auto">
                         <a class="btn btn-lapor d-flex justify-content-center ms-lg-2"
                             href="{{ route('form-pelaporan') }}" role="button">Lapor</a>
                     </li>

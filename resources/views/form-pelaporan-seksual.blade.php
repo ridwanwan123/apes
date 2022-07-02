@@ -172,7 +172,7 @@
 
                         <!-- BUTTON  -->
                         <div class="d-md-flex justify-content-md-end mt-5">
-                            <button type="submit" class="mt-1 btn  btn-next d-grid p-3 m-3">
+                            <button type="submit" class="mt-1 btn btn-next d-grid p-3 m-3">
                                 <span class="font-semibold text-base">Submit Laporan</span>
                             </button>
                         </div>
