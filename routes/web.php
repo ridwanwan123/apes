@@ -35,7 +35,6 @@ Route::post('/admin/register', [RegisterController::class, 'store'])->name('admi
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
 // ADMIN->PELAPORAN 
-
 Route::get('/admin/pelaporan-pelecehan-seksual', [PelaporanSeksualController::class, 'index'])->name('admin.pelaporan-seksual');
 
 Route::get('/admin/pelaporan-pelecehan-seksual/create', [PelaporanSeksualController::class, 'tambah'])->name('admin.pelaporan-seksual-create');
@@ -48,6 +47,8 @@ Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksua
 
 // ADMIN->BERITA 
 Route::get('/admin/berita-pelecehan-seksual', [AdminNewsController::class, 'index'])->name('admin.berita-pelecehan');
+Route::get('/admin/berita-pelecehan-seksual/create', [AdminNewsController::class, 'tambah'])->name('admin.berita-pelecehan-create');
+Route::post('/admin/berita-pelecehan-seksual/store', [AdminNewsController::class, 'store'])->name('admin.berita-pelecehan-create.store');
 
 
 

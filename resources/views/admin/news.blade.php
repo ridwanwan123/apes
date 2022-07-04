@@ -6,7 +6,7 @@
 @section('content')
 <div class="float-end mt-4">
     {{-- <a href="#" class="btn btn-primary "><i class='bx bxs-report bx-flashing bx-flip-horizontal' ></i>   Download Laporan</a>  --}}
-    <a href="" class="btn btn-primary btn-add-now"><i class='bx bxs-add-to-queue bx-flashing'></i>  Tambah Data</a>
+    <a href="{{ route('admin.berita-pelecehan-create') }}" class="btn btn-primary btn-add-now"><i class='bx bxs-add-to-queue bx-flashing'></i>  Tambah Data</a>
 </div>
 
 <h4 class="fw-bold py-3 mb-4"> Berita Pelecehan Seksual</h4>
@@ -21,7 +21,7 @@
         <tr>
         <th>#</th>
         <th>Image</th>
-        <th>Judul</th>
+        <th class="text-center">Judul</th>
         <th>Slug</th>
         <th>Konten Berita</th>
         <th>Tanggal Publish</th>
@@ -35,11 +35,11 @@
         <tr>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i><strong> {{ $loop->iteration }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 
-            <img src="" width="200%"> 
+            <img src="{{ asset('storage/image-news/'.$item->image) }}" width="200%"> 
         </td>
-        <td><span class="badge bg-label-primary me-1"> {{ $item->judul }} </span></td>
+        <td class="text-center"><span class="badge bg-label-primary m-5 me-3 "> {{ $item->judul }} </span></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->slug }} </strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>  {{ $item->body }} </strong></td>
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->body }} </strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->publish }} </strong></td>
         
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->sumber }} </strong></td>

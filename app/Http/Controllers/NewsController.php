@@ -21,4 +21,12 @@ class NewsController extends Controller
         
         return view('news-detail', ['News' => $News]);
     }
+
+    public function judul()
+    {
+        
+        $News = News::all();
+        
+        return view('list-judul', ['News' => $News]);
+    }
 }
