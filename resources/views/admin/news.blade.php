@@ -50,9 +50,8 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="" style="color:#435971"><i class="bx bx-show-alt me-1"></i> Edit</a>
-                <form method="post" action="">
-
+                <a class="dropdown-item" href="{{ route('admin.berita-pelecehan-edit', $item->id) }}" style="color:#435971"><i class="bx bx-show-alt me-1"></i> Edit</a>
+                <form method="post" action="{{ route('admin.berita-pelecehan.destroy', $item->id) }}">
                     @method('delete')
                     @csrf
                     <button type="submit" style="border: none; background-color:white; color:#435971"> 

@@ -35,7 +35,7 @@
             </div>
     
             <div class="p-4 tags">
-              <h4 class="fst-italic">News lain</h4>
+              <h4 class="fst-italic">Tags</h4>
               <ul class="list-unstyled mb-0">
                 <li><a href="#">FIKSI</a></li>
                 <li><a href="#">ANIME</a></li>
@@ -45,7 +45,7 @@
                 <li><a href="#">Thiller</a></li>
               </ul>
             </div>
-            
+
           </div>
         </div>
 

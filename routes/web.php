@@ -47,8 +47,14 @@ Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksua
 
 // ADMIN->BERITA 
 Route::get('/admin/berita-pelecehan-seksual', [AdminNewsController::class, 'index'])->name('admin.berita-pelecehan');
+
 Route::get('/admin/berita-pelecehan-seksual/create', [AdminNewsController::class, 'tambah'])->name('admin.berita-pelecehan-create');
 Route::post('/admin/berita-pelecehan-seksual/store', [AdminNewsController::class, 'store'])->name('admin.berita-pelecehan-create.store');
+
+Route::get('/admin/berita-pelecehan-seksual/edit/{id}', [AdminNewsController::class, 'edit'])->name('admin.berita-pelecehan-edit');
+Route::put('/admin/berita-pelecehan-seksual/edit/{id}', [AdminNewsController::class, 'update'])->name('admin.berita-pelecehan-edit.update');
+
+Route::delete('/admin/berita-pelecehan-seksual/delete/{id}', [AdminNewsController::class, 'destroy'])->name('admin.berita-pelecehan.destroy');
 
 
 

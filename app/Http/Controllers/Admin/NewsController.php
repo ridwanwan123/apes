@@ -44,4 +44,48 @@ class NewsController extends Controller
 
         return redirect()->route('admin.berita-pelecehan');
     }
+
+    public function edit($id)
+    {
+        $News = News::find($id);
+        
+        return view('admin.news-edit', ['News' => $News]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->except('_token');
+        $request->validate([
+            'image' => 'image|mimes:jpeg,jpg,png', 
+            'judul' => 'string',
+            'slug' => 'string',
+            'body' => 'string',
+            'sumber' => 'string',
+            'publish' => 'string'
+        ]);
+
+        $News = News::find($id);
+
+        if ($request->image){
+            //save image baru
+            $image = $request->image;
+            $originalImageName = Str::random(10).$image->getClientOriginalName();
+            $image->storeAs('public/image-news', $originalImageName);
+            $data['image'] = $originalImageName;
+            $data['kategori'] = 'Pelecehan Seksual';
+
+            //delete image lama
+            Storage::delete('public/image-news/'.$News->image);
+        }
+
+        $News->update($data);
+
+        return redirect()->route('admin.berita-pelecehan');
+    }
+
+    public function destroy($id)
+    {
+        News::find($id)->delete();
+        return redirect()->route('admin.berita-pelecehan');
+    }
 }

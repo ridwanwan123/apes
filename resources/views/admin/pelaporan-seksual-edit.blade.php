@@ -16,8 +16,8 @@
 
         <div class="card-body">
           <form enctype="multipart/form-data" method="POST" action="{{ route('admin.pelaporan-seksual-update', $PelaporanSeksual->id) }}">
-            @method('PUT')
-            @csrf
+                @method('PUT')
+                @csrf
                 <!-- input -->
                 <div class="row g-3 col-lg-12">
                     {{-- <input type="hidden" value="{{ $PelaporanSeksual->id }}" name="{{ $PelaporanSeksual->id }}"> --}}
