@@ -6,7 +6,7 @@
 @section('content')
 <div class="float-end mt-4">
     {{-- <a href="#" class="btn btn-primary "><i class='bx bxs-report bx-flashing bx-flip-horizontal' ></i>   Download Laporan</a>  --}}
-    <a href="{{ route('admin.pelaporan-seksual-create') }}" class="btn btn-primary btn-add-now"><i class='bx bxs-add-to-queue bx-flashing'></i>  Tambah Data</a>
+    {{-- <a href="{{ route('admin.pelaporan-seksual-create') }}" class="btn btn-primary btn-add-now"><i class='bx bxs-add-to-queue bx-flashing'></i>  Tambah Data</a> --}}
 </div>
 
 <h4 class="fw-bold py-3 mb-4"> Pelaporan Pelecehan Seksual</h4>
@@ -59,7 +59,7 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual-edit', $item->id) }}" style="color:#435971"><i class="bx bx-show-alt me-1"></i> Lihat</a>
+                <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual-preview', $item->id) }}" style="color:#435971"><i class="bx bx-show-alt me-1"></i> Preview</a>
                 <form method="post" action="{{ route('admin.pelaporan-seksual.destroy', $item->id) }}">
 
                     @method('delete')

@@ -51,47 +51,54 @@ class PelaporanSeksualController extends Controller
         
     }
 
-    public function edit($id)
+    public function show($id)
     {
         $PelaporanSeksual = PelaporanSeksual::find($id);
         
-        return view('admin.pelaporan-seksual-edit', ['PelaporanSeksual' => $PelaporanSeksual]);
+        return view('admin.pelaporan-seksual-preview', ['PelaporanSeksual' => $PelaporanSeksual]);
     }
 
-    public function update(Request $request, $id)
-    {
-        $data = $request->except('_token');
-        $request->validate([
-            'no_ktp' => 'string',
-            'email' => 'string',
-            'nama_pelapor' => 'string',
-            'tanggal_lahir' => 'string',
-            'alamat' => 'string',
-            'jenis_kelamin' => 'string',
-            'no_telepon' => 'string',
-            'lokasi_kejadian' => 'string',
-            'bukti' => 'image|mimes:jpeg,jpg,png',
-            'dekripsi_pelaku' => 'string',
-            'kronologi_kejadian' => 'string'
-        ]);
+    // public function edit($id)
+    // {
+    //     $PelaporanSeksual = PelaporanSeksual::find($id);
+        
+    //     return view('admin.pelaporan-seksual-edit', ['PelaporanSeksual' => $PelaporanSeksual]);
+    // }
 
-        $PelaporanSeksual = PelaporanSeksual::find($id);
+    // public function update(Request $request, $id)
+    // {
+    //     $data = $request->except('_token');
+    //     $request->validate([
+    //         'no_ktp' => 'string',
+    //         'email' => 'string',
+    //         'nama_pelapor' => 'string',
+    //         'tanggal_lahir' => 'string',
+    //         'alamat' => 'string',
+    //         'jenis_kelamin' => 'string',
+    //         'no_telepon' => 'string',
+    //         'lokasi_kejadian' => 'string',
+    //         'bukti' => 'image|mimes:jpeg,jpg,png',
+    //         'dekripsi_pelaku' => 'string',
+    //         'kronologi_kejadian' => 'string'
+    //     ]);
 
-        if ($request->bukti){
-            //save bukti baru
-            $bukti = $request->bukti;
-            $originalBuktiName = Str::random(10).$bukti->getClientOriginalName();
-            $bukti->storeAs('public/alat-bukti', $originalBuktiName);
-            $data['bukti'] = $originalBuktiName;
+    //     $PelaporanSeksual = PelaporanSeksual::find($id);
 
-            //delete bukti lama
-            Storage::delete('public/alat-bukti/'.$PelaporanSeksual->bukti);
-        }
+    //     if ($request->bukti){
+    //         //save bukti baru
+    //         $bukti = $request->bukti;
+    //         $originalBuktiName = Str::random(10).$bukti->getClientOriginalName();
+    //         $bukti->storeAs('public/alat-bukti', $originalBuktiName);
+    //         $data['bukti'] = $originalBuktiName;
 
-        $PelaporanSeksual->update($data);
+    //         //delete bukti lama
+    //         Storage::delete('public/alat-bukti/'.$PelaporanSeksual->bukti);
+    //     }
 
-        return redirect()->route('admin.pelaporan-seksual');
-    }
+    //     $PelaporanSeksual->update($data);
+
+    //     return redirect()->route('admin.pelaporan-seksual');
+    // }
 
     public function destroy($id)
     {

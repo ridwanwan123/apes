@@ -40,6 +40,8 @@ Route::get('/admin/pelaporan-pelecehan-seksual', [PelaporanSeksualController::cl
 Route::get('/admin/pelaporan-pelecehan-seksual/create', [PelaporanSeksualController::class, 'tambah'])->name('admin.pelaporan-seksual-create');
 Route::post('/admin/pelaporan-pelecehan-seksual/store', [PelaporanSeksualController::class, 'store'])->name('admin.pelaporan-seksual-create.store');
 
+Route::get('/admin/pelaporan-pelecehan-seksual/preview/{id}', [PelaporanSeksualController::class, 'show'])->name('admin.pelaporan-seksual-preview');
+
 Route::get('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualController::class, 'edit'])->name('admin.pelaporan-seksual-edit');
 Route::put('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualController::class, 'update'])->name('admin.pelaporan-seksual-update');
 
@@ -50,6 +52,8 @@ Route::get('/admin/berita-pelecehan-seksual', [AdminNewsController::class, 'inde
 
 Route::get('/admin/berita-pelecehan-seksual/create', [AdminNewsController::class, 'tambah'])->name('admin.berita-pelecehan-create');
 Route::post('/admin/berita-pelecehan-seksual/store', [AdminNewsController::class, 'store'])->name('admin.berita-pelecehan-create.store');
+
+Route::get('/admin/berita-pelecehan-seksual/preview/{id}', [AdminNewsController::class, 'show'])->name('admin.berita-pelecehan-preview');
 
 Route::get('/admin/berita-pelecehan-seksual/edit/{id}', [AdminNewsController::class, 'edit'])->name('admin.berita-pelecehan-edit');
 Route::put('/admin/berita-pelecehan-seksual/edit/{id}', [AdminNewsController::class, 'update'])->name('admin.berita-pelecehan-edit.update');

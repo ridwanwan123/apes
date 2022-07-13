@@ -25,7 +25,7 @@
         {{-- <th>Slug</th>
         <th>Konten Berita</th> --}}
         <th>Tanggal Publish</th>
-        <th>Sumber</th>
+        {{-- <th>Sumber</th> --}}
         {{-- <th>Kategori</th> --}}
         <th><i class='bx bx-cog' ></i></th>
         </tr>
@@ -35,14 +35,14 @@
         <tr>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i><strong> {{ $loop->iteration }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 
-            <img src="{{ asset('storage/image-news/'.$item->image) }}" width="200%"> 
+            <img src="{{ asset('storage/image-news/'.$item->image) }}" width="50%"> 
         </td>
         <td class="text-center"><span class="badge bg-label-primary m-5 me-3 "> {{ $item->judul }} </span></td>
         {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->slug }} </strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->body }} </strong></td> --}}
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->publish }} </strong></td>
         
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->sumber }} </strong></td>
+        {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->sumber }} </strong></td> --}}
         {{-- <td><span class="badge bg-label-danger me-1"> {{ $item->kategori }} </span></td> --}}
         <td>
             <div class="dropdown">
@@ -50,6 +50,7 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('admin.berita-pelecehan-preview', $item->id) }}" style="color:#435971"><i class="bx bx-show-alt me-1"></i> Preview</a>
                 <a class="dropdown-item" href="{{ route('admin.berita-pelecehan-edit', $item->id) }}" style="color:#435971"><i class="bx bxs-edit me-1"></i> Edit</a>
                 <form method="post" action="{{ route('admin.berita-pelecehan.destroy', $item->id) }}">
                     @method('delete')

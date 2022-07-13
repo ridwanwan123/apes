@@ -45,6 +45,13 @@ class NewsController extends Controller
         return redirect()->route('admin.berita-pelecehan');
     }
 
+    public function show($id)
+    {
+        $News = News::find($id);
+        
+        return view('admin.news-preview', ['News' => $News]);
+    }
+
     public function edit($id)
     {
         $News = News::find($id);
