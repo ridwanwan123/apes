@@ -97,7 +97,7 @@
                             <div class="col mb-3 ">
                                 <label for="email" class="form-label">Alamat Email</label>
                                 <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" aria-describedby="email">
-                                @error('no_ktp')
+                                @error('email')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>

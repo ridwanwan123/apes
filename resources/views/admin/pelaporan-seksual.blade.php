@@ -23,14 +23,14 @@
         <th>KTP</th>
         <th>Email</th>
         <th>Nama Pelapor</th>
-        <th>Tanggal lahir</th>
-        <th>Alamat Pelapor</th>
+        {{-- <th>Tanggal lahir</th>
+        <th>Alamat Pelapor</th> --}}
         <th>Jenis Kelamin</th>
         <th>No Telepon</th>
-        <th>Lokasi Kejadian</th>
+        {{-- <th>Lokasi Kejadian</th>
         <th>Bukti</th>
         <th><i class="m-3"></i>  Deskripsi Pelaku</th>
-        <th>Kronologi Kejadian</th>
+        <th>Kronologi Kejadian</th> --}}
         <th>Status</th>
         <th><i class='bx bx-cog' ></i></th>
         </tr>
@@ -42,16 +42,16 @@
         <td><span class="badge bg-label-primary me-1"> {{ $item->no_ktp }}</span></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->email }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->nama_pelapor }}</strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->tanggal_lahir }}</strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->alamat }}</strong></td>
+        {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->tanggal_lahir }}</strong></td>
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->alamat }}</strong></td> --}}
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->jenis_kelamin }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->no_telepon }}</strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->lokasi_kejadian }}</strong></td>
+        {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->lokasi_kejadian }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 
             <img src="{{ asset('storage/alat-bukti/'.$item->bukti) }}" width="200%"> 
         </td>
         <td><i class="fab fa-angular fa-lg text-danger m-3 me-3"></i> <strong> {{ $item->dekripsi_pelaku }}</strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->kronologi_kejadian }}</strong></td>
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->kronologi_kejadian }}</strong></td> --}}
         <td><span class="badge bg-label-warning me-1"> {{ $item->status }}</span></td>
         <td>
             <div class="dropdown">

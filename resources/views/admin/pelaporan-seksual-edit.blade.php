@@ -87,7 +87,7 @@
                     <label for="bukti" class="form-label">Bukti (Wajib)</label>
                     <div class="col mb-3">
                         <img src="{{ asset('storage/alat-bukti/'.$PelaporanSeksual->bukti) }}" width="30%">
-                        <input class="form-control mt-3" type="file" value="{{ $PelaporanSeksual->bukti }}" name="bukti" id="bukti" disabled>
+                        {{-- <input class="form-control mt-3" type="file" value="{{ $PelaporanSeksual->bukti }}" name="bukti" id="bukti" disabled> --}}
                     </div>
                 </div>
 

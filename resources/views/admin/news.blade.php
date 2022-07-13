@@ -22,11 +22,11 @@
         <th>#</th>
         <th>Image</th>
         <th class="text-center">Judul</th>
-        <th>Slug</th>
-        <th>Konten Berita</th>
+        {{-- <th>Slug</th>
+        <th>Konten Berita</th> --}}
         <th>Tanggal Publish</th>
         <th>Sumber</th>
-        <th>Kategori</th>
+        {{-- <th>Kategori</th> --}}
         <th><i class='bx bx-cog' ></i></th>
         </tr>
     </thead>
@@ -38,12 +38,12 @@
             <img src="{{ asset('storage/image-news/'.$item->image) }}" width="200%"> 
         </td>
         <td class="text-center"><span class="badge bg-label-primary m-5 me-3 "> {{ $item->judul }} </span></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->slug }} </strong></td>
-        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->body }} </strong></td>
+        {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->slug }} </strong></td>
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->body }} </strong></td> --}}
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->publish }} </strong></td>
         
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->sumber }} </strong></td>
-        <td><span class="badge bg-label-danger me-1"> {{ $item->kategori }} </span></td>
+        {{-- <td><span class="badge bg-label-danger me-1"> {{ $item->kategori }} </span></td> --}}
         <td>
             <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
