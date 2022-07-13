@@ -18,10 +18,27 @@
           <form enctype="multipart/form-data" method="POST" action="{{ route('admin.pelaporan-seksual-update', $PelaporanSeksual->id) }}">
                 @method('PUT')
                 @csrf
+
+                <!-- STATUS LAPORAN -->
+                <div class="row g-3 col-lg-12">
+                    <div class="col mb-3 ">
+                        <label for="status" class="form-label">STATUS LAPORAN</label>
+                        <div class="col">
+                            @if ($PelaporanSeksual->status == 'MENUNGGU')
+                                <span class="badge bg-label-warning me-1"> {{ $PelaporanSeksual->status }}</span>
+                            @elseif ($PelaporanSeksual->status == 'LAPORAN DITERIMA')
+                                <span class="badge bg-label-primary me-1"> {{ $PelaporanSeksual->status }}</span>
+                            @elseif ($PelaporanSeksual->status == 'LAPORAN DITOLAK')
+                                <span class="badge bg-label-danger me-1"> {{ $PelaporanSeksual->status }}</span>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
                 <!-- input -->
                 <div class="row g-3 col-lg-12">
                     {{-- <input type="hidden" value="{{ $PelaporanSeksual->id }}" name="{{ $PelaporanSeksual->id }}"> --}}
-                    <div class="col mb-3">
+                    <div class="col mb-3 mt-5">
                         <label for="no_ktp" class="form-label">NOMOR KTP / NOMOR IDENTITAS</label>
                         <input type="number" class="form-control" id="" value="{{ $PelaporanSeksual->no_ktp }}" name="no_ktp" aria-describedby="no_ktp" disabled>
                     </div>
