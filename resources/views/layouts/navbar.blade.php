@@ -11,16 +11,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
                     <li class="nav-item my-auto">
-                        <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
+                        <a class="nav-link {{ Request::is('homepage') ? 'active' : '' }}" aria-current="page" href="{{ url('/homepage') }}">Home</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="statistik.html">Statistik</a>
+                        <a class="nav-link" href="#">Statistik</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="konsultasi.html">Konsultasi</a>
+                        <a class="nav-link" href="#">Konsultasi</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="{{ route('berita-pelecehan') }}">Berita</a>
+                        <a class="nav-link {{ Request::is('berita-pelecehan-seksual') ? 'active' : '' }}" href="{{ url('berita-pelecehan-seksual') }}">Berita</a>
                     </li>
                     <li class="nav-item my-auto">
                         <a class="btn btn-lapor d-flex justify-content-center ms-lg-2"

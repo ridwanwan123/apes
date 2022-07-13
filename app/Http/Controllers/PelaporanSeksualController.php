@@ -26,7 +26,7 @@ class PelaporanSeksualController extends Controller
             'jenis_kelamin' => 'required|string',
             'no_telepon' => 'required|string',
             'lokasi_kejadian' => 'required|string',
-            'bukti' => 'nullable|image|mimes:jpeg,jpg,png,webp',
+            'bukti' => 'image|mimes:jpeg,jpg,png,webp',
             'dekripsi_pelaku' => 'required|string|min:16',
             'kronologi_kejadian' => 'required|string|min:16'
         ]);

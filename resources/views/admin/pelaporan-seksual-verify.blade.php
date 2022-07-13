@@ -113,7 +113,6 @@
                 <div class="row g-3 col-lg-12">
                     <div class="col mb-3 mt-3">
                         <label for="status" class="form-label">VERIFIKASI STATUS LAPORAN</label>
-                        
                         <select class="form-control" id="type" name="status">
                             <option value="MENUNGGU" {{ $PelaporanSeksual->status == 'MENUNGGU' ? 'selected' : '' }}>MENUNGGU</option>
                             <option value="LAPORAN DITERIMA" {{ $PelaporanSeksual->status == 'LAPORAN DITERIMA' ? 'selected' : '' }}>LAPORAN DITERIMA</option>

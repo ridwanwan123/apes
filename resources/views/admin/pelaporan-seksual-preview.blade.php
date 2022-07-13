@@ -25,11 +25,11 @@
                         <label for="status" class="form-label">STATUS LAPORAN</label>
                         <div class="col">
                             @if ($PelaporanSeksual->status == 'MENUNGGU')
-                                <span class="badge bg-label-warning me-1"> {{ $PelaporanSeksual->status }}</span>
+                                <span class="badge fs-3 bg-label-warning me-1"> {{ $PelaporanSeksual->status }}</span>
                             @elseif ($PelaporanSeksual->status == 'LAPORAN DITERIMA')
-                                <span class="badge bg-label-primary me-1"> {{ $PelaporanSeksual->status }}</span>
+                                <span class="badge fs-3 bg-label-primary me-1"> {{ $PelaporanSeksual->status }}</span>
                             @elseif ($PelaporanSeksual->status == 'LAPORAN DITOLAK')
-                                <span class="badge bg-label-danger me-1"> {{ $PelaporanSeksual->status }}</span>
+                                <span class="badge fs-3 bg-label-danger me-1"> {{ $PelaporanSeksual->status }}</span>
                             @endif
                         </div>
                     </div>
