@@ -40,7 +40,9 @@
           <div class="card-title d-flex align-items-start justify-content-between">
             <div class="flex-shrink-0">
               <h5 class="card-title text-nowrap mb-5">Pelaporan <br> pelecehan seksual</h5>
-              <h1 class="card-title text-primary mt-2"> ? </h1>
+              <h1 class="card-title text-primary mt-2"> 
+                {{ $PelaporanSeksual->count() }}
+              </h1>
             </div>
             <div class="dropdown">
               <img src="{{ asset('admin/assets/img/illustrations/Data report-amico.svg') }}" width="100px" alt="Credit Card" class="rounded mt-5" />
@@ -55,7 +57,9 @@
             <div class="card-title d-flex align-items-start justify-content-between">
               <div class="flex-shrink-0">
                 <h3 class="card-title text-nowrap mb-5">Berita</h3>
-                <h1 class="card-title text-primary mt-2"> ? </h1>
+                <h1 class="card-title text-primary mt-2"> 
+                {{-- {{ $News->count() }} --}}
+                </h1>
               </div>
               <div class="dropdown">
                 <img src="{{ asset('admin/assets/img/illustrations/News-pana.svg') }}" width="100px" alt="Credit Card" class="rounded mt-5" />

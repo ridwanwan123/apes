@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('no_telepon');
             $table->string('lokasi_kejadian');
             $table->string('bukti')->nullable();
-            $table->string('dekripsi_pelaku');
-            $table->string('kronologi_kejadian');
+            $table->text('dekripsi_pelaku');
+            $table->text('kronologi_kejadian');
             $table->string('status');
             $table->softDeletes();
             $table->timestamps();
