@@ -35,7 +35,7 @@
         <tr>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i><strong> {{ $loop->iteration }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 
-            <img src="{{ asset('storage/image-news/'.$item->image) }}" width="50%"> 
+            <img src="{{ asset('storage/image-news/'.$item->image) }}" height="50px"> 
         </td>
         <td class="text-center"><span class="badge bg-label-primary m-5 me-3 "> {{ $item->judul }} </span></td>
         {{-- <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->slug }} </strong></td>
@@ -55,7 +55,7 @@
                 <form method="post" action="{{ route('admin.berita-pelecehan.destroy', $item->id) }}">
                     @method('delete')
                     @csrf
-                    <button type="submit" style="border: none; background-color:white; color:#435971"> 
+                    <button type="submit" onclick="return confirm('Apakah kamu ingin menghapus data berita?')" style="border: none; background-color:white; color:#435971"> 
                         <i class="bx bx-trash me-1 m-3"></i> Delete</a>
                     </button>   
                   </form>
@@ -68,6 +68,5 @@
     </table>
 </div>
 </div>
-  
 
 @endsection

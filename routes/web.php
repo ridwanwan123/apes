@@ -42,8 +42,8 @@ Route::post('/admin/pelaporan-pelecehan-seksual/store', [PelaporanSeksualControl
 
 Route::get('/admin/pelaporan-pelecehan-seksual/preview/{id}', [PelaporanSeksualController::class, 'show'])->name('admin.pelaporan-seksual-preview');
 
-Route::get('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualController::class, 'edit'])->name('admin.pelaporan-seksual-edit');
-Route::put('/admin/pelaporan-pelecehan-seksual/edit/{id}', [PelaporanSeksualController::class, 'update'])->name('admin.pelaporan-seksual-update');
+Route::get('/admin/pelaporan-pelecehan-seksual/verify/{id}', [PelaporanSeksualController::class, 'edit'])->name('admin.pelaporan-seksual-verify');
+Route::put('/admin/pelaporan-pelecehan-seksual/verify/{id}', [PelaporanSeksualController::class, 'update'])->name('admin.pelaporan-seksual-update');
 
 Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksualController::class, 'destroy'] )->name('admin.pelaporan-seksual.destroy');
 

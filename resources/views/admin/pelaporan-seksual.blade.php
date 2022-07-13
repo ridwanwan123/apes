@@ -52,7 +52,18 @@
         </td>
         <td><i class="fab fa-angular fa-lg text-danger m-3 me-3"></i> <strong> {{ $item->dekripsi_pelaku }}</strong></td>
         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> {{ $item->kronologi_kejadian }}</strong></td> --}}
-        <td><span class="badge bg-label-warning me-1"> {{ $item->status }}</span></td>
+        <td>
+            @if ($item->status == 'MENUNGGU')
+                <span class="badge bg-label-warning me-1"> {{ $item->status }}</span>
+            @elseif ($item->status == 'LAPORAN DITERIMA')
+                <span class="badge bg-label-primary me-1"> {{ $item->status }}</span>
+            @elseif ($item->status == 'LAPORAN DITOLAK')
+                <span class="badge bg-label-danger me-1"> {{ $item->status }}</span>
+            @endif
+        </td>
+
+
+            {{-- <span class="badge bg-label-warning me-1"> {{ $item->status }}</span></td> --}}
         <td>
             <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -64,13 +75,13 @@
 
                     @method('delete')
                     @csrf
-                    <button type="submit" style="border: none; background-color:white; color:#435971"> 
+                    <button type="submit" onclick="return confirm('Apakah kamu ingin menghapus data pelaporan?')" style="border: none; background-color:white; color:#435971"> 
                         <i class="bx bx-trash me-1 m-3"></i> Delete</a>
                     </button>   
                   </form>
                 
 
-                <a class="dropdown-item" href="#" style="color:#435971"><i class="bx bx-check me-1"></i> Verify</a>
+                <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual-verify', $item->id) }}" style="color:#435971"><i class="bx bx-check me-1"></i> Verifikasi</a>
             </div>
             </div>
         </td>

@@ -48,7 +48,7 @@
                 <div class="row g-3 col-lg-12">
                     <div class="col mb-3">
                         <label for="body" class="form-label">Konten Berita</label>
-                        <textarea class="form-control" id="body" name="body" rows="6" disabled>{{ $News->body }}</textarea>
+                        <textarea class="form-control" id="body" name="body" rows="10" disabled>{{ $News->body }}</textarea>
                     </div>
                 </div>
 

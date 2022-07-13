@@ -1,15 +1,15 @@
 
 @extends('admin.layouts.base')
 
-@section('title', 'Edit Pelaporan')
+@section('title', 'Verifikasi Pelaporan')
 
    
 @section('content')
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> <a href="{{ route('admin.pelaporan-seksual') }}" style="color: unset !important"> Pelaporan Seksual </a>/</span> Edit Data</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> <a href="{{ route('admin.pelaporan-seksual') }}" style="color: unset !important"> Pelaporan Seksual </a>/</span> Verifikasi Data</h4>
             
 <div class="card mb-4">
         <div class="card-header d-flex align-items-center justify-content-between">
-          <h5 class="mb-0">Edit Data</h5>
+          <h5 class="mb-0">Verifikasi Data</h5>
           <small class="text-muted float-end">Apes</small>
         </div>
         
@@ -102,19 +102,32 @@
 
                 <!-- input -->
                 <div class="row g-3 col-lg-12">
-                    <div class="col mb-3">
+                    <div class="col mb-5">
                         <label for="kronologi_kejadian" class="form-label">Kronologi Kejadian</label>
                         <textarea class="form-control" id="kronologi_kejadian"  name="kronologi_kejadian" rows="6" disabled>{{ $PelaporanSeksual->kronologi_kejadian }}</textarea>
                     </div>
                 </div>
+
+
+                <!-- VERIFIKASI STATUS LAPORAN -->
+                <div class="row g-3 col-lg-12">
+                    <div class="col mb-3 mt-3">
+                        <label for="status" class="form-label">VERIFIKASI STATUS LAPORAN</label>
+                        <select class="form-control" id="type" name="status">
+                            <option value="MENUNGGU" {{ $PelaporanSeksual->status == 'MENUNGGU' ? 'selected' : '' }}>MENUNGGU</option>
+                            <option value="LAPORAN DITERIMA" {{ $PelaporanSeksual->status == 'LAPORAN DITERIMA' ? 'selected' : '' }}>LAPORAN DITERIMA</option>
+                            <option value="LAPORAN DITOLAK" {{ $PelaporanSeksual->status == 'LAPORAN DITOLAK' ? 'selected' : '' }}>LAPORAN DITOLAK</option>
+                        </select>
+                    </div>
+                </div>
                 
-                {{-- <!-- BUTTON  -->
+                <!-- BUTTON  -->
                 <div class="d-flex justify-content-md-end mt-3">
                     <button type="submit" class="mt-1 btn btn-primary d-grid p-3 m-3">
                         <span class="font-semibold text-white text-base">Update Data</span>
                     </button>
                 </div>
-                   --}}
+                  
           </form>
         </div>
       </div>

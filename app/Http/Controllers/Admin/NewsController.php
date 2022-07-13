@@ -26,7 +26,7 @@ class NewsController extends Controller
     {
         $data = $request->except('_token');
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,jpg,png', 
+            'image' => 'image|mimes:jpeg,jpg,png,webp', 
             'judul' => 'required|string',
             'slug' => 'required|string',
             'body' => 'required|string',
@@ -63,7 +63,7 @@ class NewsController extends Controller
     {
         $data = $request->except('_token');
         $request->validate([
-            'image' => 'image|mimes:jpeg,jpg,png', 
+            'image' => 'image|mimes:jpeg,jpg,png,webp', 
             'judul' => 'string',
             'slug' => 'string',
             'body' => 'string',
