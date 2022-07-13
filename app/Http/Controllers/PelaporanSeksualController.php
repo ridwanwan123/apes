@@ -35,7 +35,7 @@ class PelaporanSeksualController extends Controller
         $originalBuktiName = Str::random(10).$bukti->getClientOriginalName();
         $bukti->storeAs('public/alat-bukti', $originalBuktiName);
         $data['bukti'] = $originalBuktiName;
-        $data['status'] = 'Menunggu';
+        $data['status'] = 'MENUNGGU';
 
         PelaporanSeksual::create($data);
 

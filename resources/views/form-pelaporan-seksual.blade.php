@@ -201,7 +201,8 @@
                                 @enderror
                             </div>
                         </div>
-                    
+
+                        {{-- <input type="hidden" name="status" value="MEN" aria-describedby="status"> --}}
 
                         <!-- BUTTON  -->
                         <div class="d-md-flex justify-content-md-end mt-5">
