@@ -16,8 +16,8 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
-      <li class="menu-item active">
-        <a href="{{ route('admin.dashboard') }}" class="menu-link">
+      <li class="menu-item  {{ Request::is('admin/dashboard') ? 'active' : '' }}">
+        <a href="{{ url('admin/dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
@@ -26,14 +26,14 @@
       <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Data</span>
       </li>
-      <li class="menu-item">
-        <a href="{{ route('admin.pelaporan-seksual') }}" class="menu-link">
+      <li class="menu-item {{ Request::is('admin/pelaporan-pelecehan-seksual') ? 'active' : '' }}">
+        <a href="{{ url('admin/pelaporan-pelecehan-seksual') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bxs-report"></i>
           <div data-i18n="Analytics">Laporan Pelecehan Seksual</div>
         </a>
       </li>
-      <li class="menu-item">
-        <a href="{{ route('admin.berita-pelecehan') }}" class="menu-link">
+      <li class="menu-item {{ Request::is('admin/berita-pelecehan-seksual') ? 'active' : '' }}">
+        <a href="{{ url('admin/berita-pelecehan-seksual') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bxs-report"></i>
           <div data-i18n="Analytics">Berita Pelecehan Seksual</div>
         </a>
