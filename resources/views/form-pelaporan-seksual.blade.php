@@ -86,6 +86,9 @@
                             <div class="col mb-3">
                                 <label for="no_ktp" class="form-label">Nomor KTP / Nomor Identitas</label>
                                 <input type="number" class="form-control" id="no_ktp" value="{{ old('no_ktp') }}" name="no_ktp" aria-describedby="no_ktp">
+                                @error('no_ktp')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -94,10 +97,16 @@
                             <div class="col mb-3 ">
                                 <label for="email" class="form-label">Alamat Email</label>
                                 <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" aria-describedby="email">
+                                @error('no_ktp')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col mb-3 ">
                                 <label for="nama_pelapor" class="form-label">Nama Pelapor</label>
                                 <input type="nama_pelapor" class="form-control" id="nama_pelapor" value="{{ old('nama_pelapor') }}" name="nama_pelapor" aria-describedby="nama_pelapor">
+                                @error('nama_pelapor')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -106,10 +115,16 @@
                             <div class="col mb-3 ">
                                 <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
                                 <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
+                                @error('tanggal_lahir')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col mb-3 ">
-                                <label for="alamat" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" name="alamat" value="{{ old('alamat') }}" id="alamat" aria-describedby="alamat">
+                                <label for="no_telepon" class="form-label">Nomor Telepon</label>
+                                <input type="number" class="form-control" id="" name="no_telepon" value="{{ old('no_telepon') }}" aria-describedby="no_telepon">
+                                @error('no_telepon')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -117,21 +132,27 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Jenis Kelamin</label>
                                 <div class="form-check m-2">
-                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Laki-laki">
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Laki-laki" {{ old('jenis_kelamin')=="Laki-laki" ? 'checked='.'"'.'checked'.'"' : '' }}>
                                     <label class="form-check-label" for="jenis_kelamin1">
                                     Laki-laki
                                     </label>
                                 </div>
                                 <div class="form-check m-2">
-                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan">
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan" {{ old('jenis_kelamin')=="Perempuan" ? 'checked='.'"'.'checked'.'"' : '' }}>
                                     <label class="form-check-label" for="jenis_kelamin2">
                                     Perempuan
                                     </label>
                                 </div>
+                                @error('jenis_kelamin')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col mb-3">
-                                <label for="no_telepon" class="form-label">Nomor Telepon</label>
-                                <input type="number" class="form-control" id="" name="no_telepon" value="{{ old('no_telepon') }}" aria-describedby="no_telepon">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <textarea class="form-control" id="alamat" name="alamat" rows="6">{{ old('alamat') }}</textarea>
+                                @error('alamat')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         
@@ -141,6 +162,9 @@
                             <div class="col-4 mb-3">
                                 <label for="lokasi_kejadian" class="form-label">Lokasi Kejadian</label>
                                 <input type="text" class="form-control" id="" name="lokasi_kejadian" value="{{ old('lokasi_kejadian') }}" aria-describedby="lokasi_kejadian">
+                                @error('lokasi_kejadian')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -149,6 +173,9 @@
                             <div class="col-4 mb-3">
                                 <label for="bukti" class="form-label">Bukti (Foto)</label>
                                 <input class="form-control" type="file" name="bukti" id="bukti" value="{{ old('bukti') }}">
+                                @error('bukti')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -157,6 +184,9 @@
                             <div class="col mb-3">
                                 <label for="dekripsi_pelaku" class="form-label">Deskripsi Pelaku</label>
                                 <textarea class="form-control" id="dekripsi_pelaku" name="dekripsi_pelaku" rows="6">{{ old('dekripsi_pelaku') }}</textarea>
+                                @error('dekripsi_pelaku')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
@@ -166,6 +196,9 @@
                             <div class="col mb-3">
                                 <label for="kronologi_kejadian" class="form-label">Kronologi Kejadian</label>
                                 <textarea class="form-control" id="kronologi_kejadian" name="kronologi_kejadian" rows="6">{{ old('kronologi_kejadian') }}</textarea>
+                                @error('kronologi_kejadian')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                     

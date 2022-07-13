@@ -18,17 +18,17 @@ class PelaporanSeksualController extends Controller
     {
         $data = $request->except('_token');
         $request->validate([
-            'no_ktp' => 'required|string',
-            'email' => 'required|string',
+            'no_ktp' => 'required|string|min:10',
+            'email' => 'required|string|email',
             'nama_pelapor' => 'required|string',
-            'tanggal_lahir' => 'required|string',
+            'tanggal_lahir' => 'required|date',
             'alamat' => 'required|string',
             'jenis_kelamin' => 'required|string',
             'no_telepon' => 'required|string',
             'lokasi_kejadian' => 'required|string',
-            'bukti' => 'required|image|mimes:jpeg,jpg,png',
-            'dekripsi_pelaku' => 'required|string',
-            'kronologi_kejadian' => 'required|string'
+            'bukti' => 'nullable|image|mimes:jpeg,jpg,png',
+            'dekripsi_pelaku' => 'required|string|min:16',
+            'kronologi_kejadian' => 'required|string|min:16'
         ]);
 
         $bukti = $request->bukti;

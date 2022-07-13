@@ -9,7 +9,7 @@
         
     <div class="p-4 p-md-3 mb-4 text-danger">
       <div class="col-md-6 px-0">
-        <h2 class="display-5 fst-italic fw-bold">Berita Tentang Pelecehan Seksual</h2>
+        <h2 class="display-5 fst-italic fw-bold warna">Berita Tentang Pelecehan Seksual</h2>
         <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
       </div>
     </div>
