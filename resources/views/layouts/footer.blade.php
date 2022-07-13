@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 text-lg-start text-center">
-                    <a href="index.html" class="mb-30">
+                    <a href="{{ url('/homepage') }}" class="mb-30">
                         <img src="{{ asset('frontend/assets/image/logo.png') }}" width="150px" alt="" srcset="">
                     </a>
                     <p class="mt-30 text-lg color-palette-1 mb-30">Membantu para korban untuk melapor pelecehan seksual</p>
