@@ -13,24 +13,39 @@ class LoginController extends Controller
         return view('admin.login');
     }
 
-    public function auth(Request $request)
+    public function authenticate(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email',
+        $credentials = $request->validate([
+            'email' => 'required|email:dns',
             'password' => 'required'
         ]);
-
-        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('admin.dashboard');
+            return redirect()->intended('admin/dashboard');
         }
 
-        return back()->withErrors([
-            'email' => 'Email atau password salah!!'
-        ])->withInput();
+        return back()->with('loginError', 'Login failed!!');
+
+
+
+        // $request->validate([
+        //     'email' => 'required|email:dns',
+        //     'password' => 'required'
+        // ]);
+
+        // $credentials = $request->only('email', 'password');
+
+        // if (Auth::attempt($credentials)) {
+        //     $request->session()->regenerate();
+
+        //     return redirect()->route('admin.dashboard');
+        // }
+
+        // return back()->withErrors([
+        //     'email' => 'Email atau password salah!!'
+        // ])->withInput();
     }
 
     public function logout(Request $request)
@@ -41,6 +56,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('admin.login');
+        return redirect('admin/login');
     }
 }

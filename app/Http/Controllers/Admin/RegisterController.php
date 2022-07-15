@@ -23,6 +23,7 @@ class RegisterController extends Controller
         ]);
 
         $data = $request->except('_token');
+        $data['roles'] = 'ADMIN';
 
         $isEmailExist = User::where('email', $request->email)->exists();
 
@@ -38,6 +39,8 @@ class RegisterController extends Controller
 
         User::create($data);
 
-        return redirect()->route('admin.login');
+        // $request->session()->flash('success', 'Registration successfully!! Please Login');
+
+        return redirect()->route('admin.login')->with('success', 'Registration successfully!! Please Login');
     }
 }

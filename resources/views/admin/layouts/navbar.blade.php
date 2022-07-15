@@ -60,10 +60,19 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <form action="{{ route('admin.logout') }}">
+                          @csrf
+                          <button type="submit" onclick="return confirm('Apakah kamu ingin logout?')" style="border: none; background-color:white; color:#435971"> 
+                            <i class="bx bx-power-off me-2 m-3"></i> Delete</a>
+                        </button>   
+                      </form>
+
+
+
+                      {{-- <a class="dropdown-item" href="auth-login-basic.html">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
-                      </a>
+                      </a> --}}
                     </li>
                   </ul>
                 </li>

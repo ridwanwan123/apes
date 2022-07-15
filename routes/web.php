@@ -26,8 +26,9 @@ Route::get('/homepage', function () {
 })->name('homepage');
 
 //ADMIN 
-Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
-Route::post('/admin/login', [LoginController::class, 'auth'])->name('admin.login.auth');
+Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login')->middleware('guest');
+Route::post('/admin/login', [LoginController::class, 'authenticate'])->name('admin.login.auth');
+Route::get('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 Route::get('/admin/register', [RegisterController::class, 'index'])->name('admin.register');
 Route::post('/admin/register', [RegisterController::class, 'store'])->name('admin.register.store');

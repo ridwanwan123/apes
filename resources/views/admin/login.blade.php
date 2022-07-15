@@ -54,12 +54,32 @@
 
   <body>
     <!-- Content -->
+    
+    
 
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
+
+            @if (session()->has('success'))
+            <div class="alert alert-primary alert-dismissible" role="alert">
+              {{ session('success') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
+
+            @if (session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              {{ session('loginError') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif 
+
+
+
           <div class="card">
+            
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
@@ -78,7 +98,7 @@
                 @csrf
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                  <input type="text" class="form-control @error('email') is-invalid @enderror" id="email"  name="email" placeholder="Enter your email" />
                   @error('email')
                   <div style="color: red">{{ $message }}</div>
                   @enderror
