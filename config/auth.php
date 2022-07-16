@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'pelapor' => [
+            'driver' => 'session',
+            'provider' => 'pelapors',
+        ]
     ],
 
     /*
@@ -64,11 +69,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'pelapors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\SexualHarassment::class,
+        ],
     ],
 
     /*

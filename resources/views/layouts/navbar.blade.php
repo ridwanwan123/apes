@@ -22,10 +22,21 @@
                     <li class="nav-item my-auto">
                         <a class="nav-link {{ Request::is('berita-pelecehan-seksual') ? 'active' : '' }}" href="{{ url('berita-pelecehan-seksual') }}">Berita</a>
                     </li>
-                    <li class="nav-item my-auto">
-                        <a class="btn btn-lapor d-flex justify-content-center ms-lg-2"
-                            href="{{ route('form-pelaporan') }}" role="button">Lapor</a>
-                    </li>
+
+                    @auth
+                        <li class="nav-item my-auto">
+                            <a class="btn btn-lapor d-flex justify-content-center ms-lg-2" href="#" role="button">My Profile</a>
+                        </li>
+                    @else
+                        <li class="nav-item my-auto">
+                            <a class="btn btn-lapor d-flex justify-content-center ms-lg-2" href="{{ route('login') }}" role="button">Login</a>
+                        </li>
+                    @endauth    
+
+
+                    
+
+                    
                 </ul>
             </div>
         </div>

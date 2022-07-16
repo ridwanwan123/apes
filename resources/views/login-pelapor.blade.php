@@ -91,15 +91,15 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome Admin to APES! 👋</h4>
+              <h4 class="mb-2">Welcome to APES! 👋</h4>
               <!-- <p class="mb-4">Please sign-in to your account and start the adventure</p> -->
 
-              <form id="" class="mb-3" action="{{ route('admin.login.auth') }}" method="POST">
+              <form id="" class="mb-3" action="{{ route('login.auth') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control @error('email') is-invalid @enderror" id="email"  name="email" placeholder="Enter your email" />
-                  @error('email')
+                  <label for="email_korban" class="form-label">Email Korban</label>
+                  <input type="email_korban" class="form-control @error('email_korban') is-invalid @enderror" id="email_korban"  name="email_korban" placeholder="Enter your email_korban" />
+                  @error('email_korban')
                   <div style="color: red">{{ $message }}</div>
                   @enderror
                 </div>
@@ -123,7 +123,7 @@
 
               <p class="text-center">
                 <span>Tidak Punya Akun?</span>
-                <a href="{{ route('admin.register') }}">
+                <a href="{{ route('registrasi') }}">
                   <span>Buat Akun</span>
                 </a>
               </p>

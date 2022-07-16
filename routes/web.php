@@ -9,6 +9,10 @@ use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 
 use App\Http\Controllers\PelaporanSeksualController as PelaporanController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\AkunSettingController;
+use App\Http\Controllers\RegisterController as RegistrasiPelaporController;
+use App\Http\Controllers\LoginPelaporController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +30,7 @@ Route::get('/homepage', function () {
 })->name('homepage');
 
 //ADMIN 
-Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login')->middleware('guest');
+Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'authenticate'])->name('admin.login.auth');
 Route::get('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
@@ -65,6 +69,21 @@ Route::delete('/admin/berita-pelecehan-seksual/delete/{id}', [AdminNewsControlle
 
 
 //HALAMAN UTAMA
+//REGISTRASI AKUN
+Route::get('/registrasi',[RegistrasiPelaporController::class, 'index'])->name('registrasi');
+Route::post('/registrasi',[RegistrasiPelaporController::class, 'store'])->name('registrasi.store');
+
+
+Route::get('/login', [LoginPelaporController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [LoginPelaporController::class, 'auth'])->name('login.auth');
+
+
+
+
+//PROFILE AKUN
+Route::get('/akun-setting', [AkunSettingController::class, 'index'])->name('akun-setting');
+
+
 //FORMULIR
 Route::get('/form-pelaporan-pelecehan-seksual', [PelaporanController::class, 'index'])->name('form-pelaporan');
 Route::post('/form-pelaporan-pelecehan-seksual/store', [PelaporanController::class, 'store'])->name('form-pelaporan.store');

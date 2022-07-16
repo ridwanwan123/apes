@@ -63,7 +63,7 @@
                       <form action="{{ route('admin.logout') }}">
                           @csrf
                           <button type="submit" onclick="return confirm('Apakah kamu ingin logout?')" style="border: none; background-color:white; color:#435971"> 
-                            <i class="bx bx-power-off me-2 m-3"></i> Delete</a>
+                            <i class="bx bx-power-off me-2 m-3"></i> Logout</a>
                         </button>   
                       </form>
 
