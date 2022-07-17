@@ -30,7 +30,7 @@ Route::get('/homepage', function () {
 })->name('homepage');
 
 //ADMIN 
-Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
+Route::get('/admin/login', [LoginController::class, 'index'])->middleware('guest')->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'authenticate'])->name('admin.login.auth');
 Route::get('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
