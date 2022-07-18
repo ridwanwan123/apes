@@ -70,12 +70,12 @@ Route::delete('/admin/berita-pelecehan-seksual/delete/{id}', [AdminNewsControlle
 
 //HALAMAN UTAMA
 //REGISTRASI AKUN
-Route::get('/registrasi',[RegistrasiPelaporController::class, 'index'])->name('registrasi');
-Route::post('/registrasi',[RegistrasiPelaporController::class, 'store'])->name('registrasi.store');
+// Route::get('/registrasi',[RegistrasiPelaporController::class, 'index'])->name('registrasi');
+// Route::post('/registrasi',[RegistrasiPelaporController::class, 'store'])->name('registrasi.store');
 
 
-Route::get('/login', [LoginPelaporController::class, 'index'])->middleware('guest')->name('login');
-Route::post('/login', [LoginPelaporController::class, 'auth'])->name('login.auth');
+// Route::get('/login', [LoginPelaporController::class, 'index'])->middleware('guest')->name('login');
+// Route::post('/login', [LoginPelaporController::class, 'auth'])->name('login.auth');
 
 
 

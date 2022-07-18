@@ -82,7 +82,7 @@
 
                         @csrf
                         <!-- input -->
-                        <div class="row g-3 col-lg-12">
+                        <div class="row  col-lg-12">
                             <div class="col mb-3">
                                 <label for="no_ktp" class="form-label">Nomor KTP / Nomor Identitas</label>
                                 <input type="number" class="form-control" id="no_ktp" value="{{ old('no_ktp') }}" name="no_ktp" aria-describedby="no_ktp">
@@ -93,8 +93,8 @@
                         </div>
 
                         <!-- Input  -->
-                        <div class="row g-3 col-lg-12">
-                            <div class="col mb-3 ">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6 mb-3 ">
                                 <label for="email" class="form-label">Alamat Email</label>
                                 <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" aria-describedby="email">
                                 @error('email')
@@ -111,7 +111,7 @@
                         </div>
 
                         <!-- Input  -->
-                        <div class="row g-3 col-lg-12">
+                        <div class="row  col-lg-12">
                             <div class="col mb-3 ">
                                 <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
                                 <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
@@ -128,8 +128,8 @@
                             </div>
                         </div>
 
-                        <div class="row g-3 col-lg-12">
-                            <div class="col mb-3">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6 mb-3">
                                 <label for="" class="form-label">Jenis Kelamin</label>
                                 <div class="form-check m-2">
                                     <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Laki-laki" {{ old('jenis_kelamin')=="Laki-laki" ? 'checked='.'"'.'checked'.'"' : '' }}>
@@ -158,8 +158,8 @@
                         
 
                         <!-- input -->
-                        <div class="row g-3 col-lg-12">
-                            <div class="col-4 mb-3">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6 mb-3">
                                 <label for="lokasi_kejadian" class="form-label">Lokasi Kejadian</label>
                                 <input type="text" class="form-control" id="" name="lokasi_kejadian" value="{{ old('lokasi_kejadian') }}" aria-describedby="lokasi_kejadian">
                                 @error('lokasi_kejadian')
@@ -169,8 +169,8 @@
                         </div>
 
                         <!-- input -->
-                        <div class="row g-3 col-lg-12">
-                            <div class="col-4 mb-3">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6  col-lg-12 mb-3">
                                 <label for="bukti" class="form-label">Bukti (Foto)</label>
                                 <input class="form-control" type="file" name="bukti" id="bukti" value="{{ old('bukti') }}">
                                 @error('bukti')
@@ -180,8 +180,8 @@
                         </div>
 
                         <!-- input -->
-                        <div class="row g-3 col-lg-12">
-                            <div class="col mb-3">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6  col-lg-12 mb-3">
                                 <label for="dekripsi_pelaku" class="form-label">Deskripsi Pelaku</label>
                                 <textarea class="form-control" id="dekripsi_pelaku" name="dekripsi_pelaku" rows="6">{{ old('dekripsi_pelaku') }}</textarea>
                                 @error('dekripsi_pelaku')
@@ -192,8 +192,8 @@
 
 
                         <!-- input -->
-                        <div class="row g-3 col-lg-12">
-                            <div class="col mb-3">
+                        <div class="row  col-lg-12">
+                            <div class="col-md-6 col-lg-12 mb-3">
                                 <label for="kronologi_kejadian" class="form-label">Kronologi Kejadian</label>
                                 <textarea class="form-control" id="kronologi_kejadian" name="kronologi_kejadian" rows="6">{{ old('kronologi_kejadian') }}</textarea>
                                 @error('kronologi_kejadian')

@@ -90,9 +90,12 @@
         </tr>
         @endforeach
     </tbody>
+       
     </table>
 </div>
 </div>
   
+    {{-- {{ $PelaporanSeksual->links() }} --}}
+
 
 @endsection

@@ -35,7 +35,7 @@
               <div class="row">
                 <div class="mb-3 col-md-6">
                   <label for="nama" class="form-label">Nomor KTP/ Identitas Diri</label>
-                  <input class="form-control" type="text"  id="nama" value="{{ auth()->sexualHarassment()->no_ktp }}"  name="nama"/>
+                  <input class="form-control" type="text"  id="nama" value="#"  name="nama"/>
                 </div>
                 <div class="mb-3 col-md-6">
                   <label for="nama" class="form-label">Nama Lengkap</label>

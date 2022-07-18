@@ -18,7 +18,7 @@ class PelaporanSeksualController extends Controller
     {
         $data = $request->except('_token');
         $request->validate([
-            'no_ktp' => 'required|string|min:10',
+            'no_ktp' => 'required|string|min:10|unique:pelaporan_seksual',
             'email' => 'required|string|email',
             'nama_pelapor' => 'required|string',
             'tanggal_lahir' => 'required|date',
@@ -30,6 +30,16 @@ class PelaporanSeksualController extends Controller
             'dekripsi_pelaku' => 'required|string|min:16',
             'kronologi_kejadian' => 'required|string|min:16'
         ]);
+
+        $isNoKtpExist = PelaporanSeksual::where('no_ktp', $request->no_ktp)->exists();
+
+        if ($isNoKtpExist) {
+            return back()
+                ->withErrors([
+                    'no_ktp' => 'This No KTP already exists'
+                ])
+                ->withInput();
+        }
 
         $bukti = $request->bukti;
         $originalBuktiName = Str::random(10).$bukti->getClientOriginalName();

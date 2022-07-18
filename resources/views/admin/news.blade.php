@@ -69,4 +69,7 @@
 </div>
 </div>
 
+
+    {{-- {{ $News->links() }} --}}
+
 @endsection
