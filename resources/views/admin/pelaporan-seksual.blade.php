@@ -84,7 +84,13 @@
                 
 
                 <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual-verify', $item->id) }}" style="color:#435971"><i class="bx bx-check me-1"></i> Verifikasi</a>
-            </div>
+                
+                @if ($item->status == 'LAPORAN DITERIMA' || $item->status == 'LAPORAN DITOLAK')
+                    <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual.generatePDF', $item->id) }}" style="color:#435971" target="_blank"><i class='bx bx-download me-1'></i> Download</a>
+                @endif
+
+                
+                </div>
             </div>
         </td>
         </tr>

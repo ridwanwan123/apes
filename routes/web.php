@@ -45,12 +45,14 @@ Route::get('/admin/pelaporan-pelecehan-seksual', [PelaporanSeksualController::cl
 Route::get('/admin/pelaporan-pelecehan-seksual/create', [PelaporanSeksualController::class, 'tambah'])->name('admin.pelaporan-seksual-create');
 Route::post('/admin/pelaporan-pelecehan-seksual/store', [PelaporanSeksualController::class, 'store'])->name('admin.pelaporan-seksual-create.store');
 
-Route::get('/admin/pelaporan-pelecehan-seksual/preview/{id}', [PelaporanSeksualController::class, 'show'])->name('admin.pelaporan-seksual-preview');
+Route::get('/admin/pelaporan-pelecehan-seksual/preview/{id}', [PelaporanSeksualController::class, 'preview'])->name('admin.pelaporan-seksual-preview');
 
 Route::get('/admin/pelaporan-pelecehan-seksual/verify/{id}', [PelaporanSeksualController::class, 'edit'])->name('admin.pelaporan-seksual-verify');
 Route::put('/admin/pelaporan-pelecehan-seksual/verify/{id}', [PelaporanSeksualController::class, 'update'])->name('admin.pelaporan-seksual-update');
 
-Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksualController::class, 'destroy'] )->name('admin.pelaporan-seksual.destroy');
+Route::delete('/admin/pelaporan-pelecehan-seksual/delete/{id}', [PelaporanSeksualController::class, 'destroy'])->name('admin.pelaporan-seksual.destroy');
+
+Route::get('/admin/pelaporan-pelecehan-seksual/generatePDF/{id}', [PelaporanSeksualController::class, 'generatePDF'])->name('admin.pelaporan-seksual.generatePDF');
 
 // ADMIN->BERITA 
 Route::get('/admin/berita-pelecehan-seksual', [AdminNewsController::class, 'index'])->name('admin.berita-pelecehan');

@@ -51,24 +51,24 @@
         </div>
       </div>
     </div>
-      <div class="col-lg-3 col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title d-flex align-items-start justify-content-between">
-              <div class="flex-shrink-0">
-                <h3 class="card-title text-nowrap mb-5">Berita</h3>
-                <h1 class="card-title text-primary mt-2"> 
-                {{-- {{ $News->count() }} --}}
-                </h1>
-              </div>
-              <div class="dropdown">
-                <img src="{{ asset('admin/assets/img/illustrations/News-pana.svg') }}" width="100px" alt="Credit Card" class="rounded mt-5" />
-              </div>
+    {{-- <div class="col-lg-3 col-md-3 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title d-flex align-items-start justify-content-between">
+            <div class="flex-shrink-0">
+              <h3 class="card-title text-nowrap mb-5">Berita</h3>
+              <h1 class="card-title text-primary mt-2"> 
+              {{ $News->count() }}
+              </h1>
+            </div>
+            <div class="dropdown">
+              <img src="{{ asset('admin/assets/img/illustrations/News-pana.svg') }}" width="100px" alt="Credit Card" class="rounded mt-5" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
+  </div>
   </div>
 </div>
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\PelaporanSeksual;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class PelaporanSeksualController extends Controller
 {
@@ -51,7 +52,7 @@ class PelaporanSeksualController extends Controller
         
     }
 
-    public function show($id)
+    public function preview($id)
     {
         $PelaporanSeksual = PelaporanSeksual::find($id);
         
@@ -105,5 +106,18 @@ class PelaporanSeksualController extends Controller
     {
         PelaporanSeksual::find($id)->delete();
         return redirect()->route('admin.pelaporan-seksual');
+    }
+
+    public function generatePDF($id)
+    {
+        $PelaporanSeksual = PelaporanSeksual::find($id);
+        $data = [
+            'title' => 'Hasil Laporan Pelecehan Seksual',
+            'date' => date('m/d/Y'),
+            'PelaporanSeksual' => $PelaporanSeksual
+        ];
+
+        $pdf = PDF::loadView('admin.generatePDF', $data);
+        return $pdf->download('resultLaporanPelecehanSeksual.pdf');
     }
 }

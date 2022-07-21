@@ -125,13 +125,8 @@
                     </div>
                 </div>
                 
-                {{-- <!-- BUTTON  -->
-                <div class="d-flex justify-content-md-end mt-3">
-                    <button type="submit" class="mt-1 btn btn-primary d-grid p-3 m-3">
-                        <span class="font-semibold text-white text-base">Update Data</span>
-                    </button>
-                </div>
-                   --}}
+                <!-- BUTTON  -->
+                  
                 
           </form>
         </div>
