@@ -82,9 +82,6 @@ Route::delete('/admin/berita-pelecehan-seksual/delete/{id}', [AdminNewsControlle
 
 
 
-//PROFILE AKUN
-Route::get('/akun-setting', [AkunSettingController::class, 'index'])->name('akun-setting');
-
 
 //FORMULIR
 Route::get('/form-pelaporan-pelecehan-seksual', [PelaporanController::class, 'index'])->name('form-pelaporan');
@@ -96,5 +93,7 @@ Route::get('/form-pelaporan-pelecehan-seksual/success', [PelaporanController::cl
 Route::get('/berita-pelecehan-seksual', [NewsController::class, 'index'])->name('berita-pelecehan');
 Route::get('/berita-pelecehan-seksual/{id}', [NewsController::class, 'detail'])->name('berita-pelecehan.detail');
 
-
+//STATISTIK
+Route::get('/statistik', [AkunSettingController::class, 'statistik'])->name('statistik');
+Route::get('/form-pelaporan-pelecehan-seksual/konsultasi', [AkunSettingController::class, 'konsul'])->name('konsultasi');
 

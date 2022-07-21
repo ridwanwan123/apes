@@ -9,13 +9,13 @@ use App\Models\SexualHarassment;
 
 class AkunSettingController extends Controller
 {
-    public function index()
+    public function statistik()
     {
-        return view('akun-setting');
+        return view('statistik');
     }
 
-    public function hasilLaporan()
+    public function konsul()
     {
-        return view('result-laporan');
+        return view('konsultasi');
     }
 }

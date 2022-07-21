@@ -14,11 +14,11 @@
                         <a class="nav-link {{ Request::is('homepage') ? 'active' : '' }}" aria-current="page" href="{{ url('/homepage') }}">Home</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="#">Statistik</a>
+                        <a class="nav-link {{ Request::is('statistik') ? 'active' : '' }}" href="{{ url('/statistik') }}">Statistik</a>
                     </li>
-                    <li class="nav-item my-auto">
+                    {{-- <li class="nav-item my-auto">
                         <a class="nav-link" href="#">Konsultasi</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item my-auto">
                         <a class="nav-link {{ Request::is('berita-pelecehan-seksual') ? 'active' : '' }}" href="{{ url('berita-pelecehan-seksual') }}">Berita</a>
                     </li>

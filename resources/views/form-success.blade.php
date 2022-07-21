@@ -86,6 +86,8 @@
                             <div class="button-group d-flex flex-column mx-auto">
                                 <a class="btn btn-dashboard fw-medium text-lg text-white rounded-pill mb-16"
                                     href="{{ route('homepage') }}" role="button">Home</a>
+                                <a class="btn btn-whatsapp fw-medium text-lg  rounded-pill mb-16"
+                                href="{{ route('konsultasi') }}" role="button">Konsultasi</a>
                             </div>
                         </div>
                     </section>

@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/utilites.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/news.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/statistik.css') }}">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -57,6 +57,15 @@
 
     <!-- CUSTOM JS -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+    <!-- CHART JS -->
+    <script src="{{ asset('frontend/assets/js/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/chart.js/my_chart.js') }}"></script>
+
+    <!-- AOS Animation -->
+    <script>
+        AOS.init();
+    </script>
 
     <!-- AOS Animation -->
     <script>
