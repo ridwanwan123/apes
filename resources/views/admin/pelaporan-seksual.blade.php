@@ -87,6 +87,7 @@
                 
                 @if ($item->status == 'LAPORAN DITERIMA' || $item->status == 'LAPORAN DITOLAK')
                     <a class="dropdown-item" href="{{ route('admin.pelaporan-seksual.generatePDF', $item->id) }}" style="color:#435971" target="_blank"><i class='bx bx-download me-1'></i> Download</a>
+                    <a class="dropdown-item" href="{{ url('https://wa.me/'.$item->no_telepon) }}" style="color:#435971"><i class='bx bxl-whatsapp me-1'></i> Whatsapp</a>
                 @endif
 
                 
