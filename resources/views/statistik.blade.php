@@ -22,7 +22,7 @@
             <h2 class="fw-semibold color-palette-1">Total Kasus</h2> <hr>
             <div class="row">
                 <div class="col">
-                    <h1 class="fw-bold color-palette-1 mt-3">2363</h1>
+                    <h1 class="fw-bold color-palette-1 mt-3">17407</h1>
                 </div>
                 <div class="col">
                     <img src="{{ asset('frontend/assets/image/Vector.png') }}" width="80px" alt="" srcset="">

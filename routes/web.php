@@ -97,3 +97,4 @@ Route::get('/berita-pelecehan-seksual/{id}', [NewsController::class, 'detail'])-
 Route::get('/statistik', [AkunSettingController::class, 'statistik'])->name('statistik');
 Route::get('/form-pelaporan-pelecehan-seksual/konsultasi', [AkunSettingController::class, 'konsul'])->name('konsultasi');
 
+Route::get('/teamApes', [AkunSettingController::class, 'team'])->name('team');

@@ -252,6 +252,36 @@
   font-size: 14px;
 }
 
+.admission_insruction {
+  padding: 50px 0 0;
+}
+
+.admission_insruction h4 {
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.admission_insruction p {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.admission_insruction p span {
+  color: #0275d8;
+}
+.about-style3 img {
+  margin: 0;
+  box-shadow: 3px 3px 20px #BA68C8;
+  border-radius: 25%;
+}
+
+.about-img {
+  width: 200px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+
 /* Footer */
 footer{
     padding-top: 5rem;
@@ -278,8 +308,9 @@ footer ul li a:hover{
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (max-width: 376px) { 
 
+  
 }
 
 @media (max-width:768px) {
@@ -289,7 +320,6 @@ footer ul li a:hover{
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
    /* Header */
-   
    /*  */
 }
 
@@ -306,6 +336,7 @@ footer ul li a:hover{
 .header .underline-blue {
    text-decoration: none; 
    position: relative; 
+   
  }  
 
 .header .underline-blue:after {

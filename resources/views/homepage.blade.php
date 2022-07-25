@@ -151,7 +151,7 @@
       style='background-image: url("assets/image/Questions-amico\ 1.png");'>&nbsp;</div> -->
       
       <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img-faq">
-          <img src="{{ asset('frontend/assets/image/Questions-amico 1.png') }}" alt="" srcset="">
+          <img src="{{ asset('frontend/assets/image/Questions-amico 1.png') }}" alt="" class="img-sq" srcset="">
       </div>
     </div>
 

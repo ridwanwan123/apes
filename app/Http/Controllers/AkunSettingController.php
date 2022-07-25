@@ -18,4 +18,9 @@ class AkunSettingController extends Controller
     {
         return view('konsultasi');
     }
+
+    public function team()
+    {
+        return view('teamApes');
+    }
 }
